@@ -28,12 +28,13 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", "Open Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 .menu-bg {
   background-color: #ededf9;
-  border-bottom: 1px solid #e3e1f9
+  border-bottom: 1px solid #e3e1f9;
 }
 
 .wrapper-centered {
@@ -59,7 +60,7 @@ nav {
   display: flex;
   gap: 15px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 0.75rem;
 }
 
 nav a {
@@ -68,7 +69,7 @@ nav a {
 }
 
 nav a:hover {
-  color: black
+  color: black;
 }
 
 /* header alanı bitti */
@@ -87,7 +88,7 @@ nav a:hover {
 
 .hero h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 2rem;
   color: #70d000;
 }
 
@@ -97,3 +98,45 @@ nav a:hover {
 }
 
 /* hero alanı bitti */
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  .wrapper-centered {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 10px 15px 10px;
+    width: 100%;
+    display: flex;
+  }
+  nav {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  nav a {
+    width: 25%;
+    flex: 1;
+    min-width: fit-content;
+  }
+  .hero {
+    margin-top: 0;
+    height: 70vh;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
